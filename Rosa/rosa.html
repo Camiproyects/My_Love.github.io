@@ -1,49 +1,73 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rosa</title>
-    <link rel="stylesheet" href="rosa.css"></link>
-  
+    <link rel="stylesheet" href="rosa.css">
 </head>
 <body>
-    <div class="container">
-        <div class="glass"></div>
-        <div class="thorns">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="page">
+        <div class="container">
+            <div class="glass"></div>
+            <div class="thorns">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="glow"></div>
+            <div class="rose-leaves">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="rose-petals">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sparkles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-        <div class="glow"></div>
-        <div class="rose-leaves">
-            <div></div>
-            <div></div>
-        </div>
-        <div class="rose-petals">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="sparkles">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+        <div class="gallery-panel">
+            <div class="image-frame">
+                <img id="loveImage" src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=80" alt="Foto de amor 1">
+            </div>
+            <button id="toggleImage" type="button">Cambiar foto</button>
         </div>
     </div>
-    <h2> STEFANNY ...❤️...</h2>
+
+    <h2>STEFANNY ...❤️...</h2>
+
+    <script>
+        const images = [
+            "https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80"
+        ];
+
+        const loveImage = document.getElementById("loveImage");
+        const toggleButton = document.getElementById("toggleImage");
+        let currentIndex = 0;
+
+        toggleButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            loveImage.src = images[currentIndex];
+        });
+    </script>
 </body>
 </html>
